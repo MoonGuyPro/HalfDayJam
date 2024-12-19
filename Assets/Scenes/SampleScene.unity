@@ -1140,8 +1140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8841993528299541973, guid: 66e89b7ebf5d6f54589b34c95642bec9, type: 3}
-  spawnAfterPasses: 5
-  maxEnemies: 5
+  spawnAfterPasses: 2
+  maxEnemies: 6
 --- !u!4 &540576723
 Transform:
   m_ObjectHideFlags: 0
