@@ -6,7 +6,10 @@ public class ObstacleController : MonoBehaviour
     public Transform player; // Assign the Player transform in the Inspector
     public float vibrationDistanceThreshold = 10f; // Maximum distance for vibration to occur
     private float vibrationTimer = 0f;
-
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     private void Update()
     {
         if (isPlayerInCollision)
