@@ -1,7 +1,14 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class DeathBox : MonoBehaviour
 {
+    private GameControler m_GameControler;
+    private void Start()
+    {
+        m_GameControler = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControler>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -14,7 +21,6 @@ public class DeathBox : MonoBehaviour
 
     private void LoseGame()
     {
-        // Placeholder for game-over logic
-        Debug.Log("Game Over logic goes here.");
+        m_GameControler.Lose();
     }
 }
